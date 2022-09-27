@@ -1,0 +1,9 @@
+body {
+    background-color: red;
+    color: white;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    font-size: 28px;
+    font-family: 'aria';
+}
