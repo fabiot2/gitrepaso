@@ -96,8 +96,18 @@ git remote remove origin: remover un origen de nuestro repositorio.
 git remote rename: cambiar el nombre del origen de nuestro repositorio.
 
 
+-----------------------git push-------------------
+git push -u origin master: ó
+git push -u origin main: dependiendo de la configuracion de git
 
+Si genera problema de error, por que otra persona edito el archivo, entonces necesitará hacer primero un pull de la información actual.
+
+git pull origin master.
 
 
 -----------------------git pull-------------------
-envía
+git pull origin master: trae la información del remoto a local.
+
+Podría generar error, pues el origin master podría ser distinto a lo que se tiene en local. para forzar.
+
+git pull origin master --allow-unrelated-histories : fusionar las ramas remotos con local. luego permitirá hacer el merge con la rama master.
