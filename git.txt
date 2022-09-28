@@ -152,3 +152,6 @@ git tag -a v0.1 -m "Primera version" bc3444e : para agregar tags.
 git tag: ver todos los tags
 git show-ref --tags: permite conocer los tags relacionados a las diferentes versiones.
 git push origin --tags: Para enviar tags. 
+git tag -d nombretag: para eliminar tag. No se borra de github pro que es la forma como se taggea, categoriza, organizas cambios.
+git push origin :refs/tags/nombretag: sintax interna que borra el tag de nuestro origen remoto *github*
+-------------------Manejo de ramas en GitHub-------------------
