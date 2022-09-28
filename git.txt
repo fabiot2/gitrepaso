@@ -94,7 +94,7 @@ git remote add origin https://github.com/fabiot2/malinktree
 git: agregar un origen remoto de nuestro repositorio 
 git remote remove origin: remover un origen de nuestro repositorio.
 git remote rename: cambiar el nombre del origen de nuestro repositorio.
-
+git remote set-url origin url_del_repositorio: cambiar la url de nuestro repo.
 
 -----------------------git push-------------------
 git push -u origin master: ó
