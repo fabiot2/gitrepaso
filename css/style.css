@@ -1,0 +1,19 @@
+#container {
+    color: palevioletred;
+    background-color: purple;
+}
+
+#container__post {
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+}
+
+#container__post h1 {
+    font-size: 52px;
+}
+
+#container__post p {
+    font-size: 20px;
+    margin-top: 20px;
+}
