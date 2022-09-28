@@ -12,6 +12,29 @@ git config --global user.name "newname": cambiar la configuracion del usuario de
 git config --global user.email "nuevo correo" : cambia configuracion de correo git.
 git remote set-url origin new.git.url/here
 
+
+-----------------------Sobre Llaves-------------------
+Existen dos llaves o códigos cifrados que se generan al mismo tiempo.
+
+llave pública: que podrá ser compartida con el mundo, cifrará todos los mensajes que se envién. aún donde se intercepte el mensaje, tardarian años en decifrar. Para eso se necesita entonces.
+
+llave privada: quien servirá para decifrar la llave pública y finalmente el mensaje.
+Lo que me hace pensar que quizas esto funcione como una llave de dos partes.
+
+---------------Configurar llaves SSH en Local-------------------
+Se recomienda ir a la home, puede ser $HOME y ejecutar el comando git config -l para visualizar la configuracion. en caso de requerir cambio de email. deberá seguir el siguiente comando.  git config --global user.email "correoquesequiera". Puede verificar nuevamente con git config -l.
+
+ssh-keygen -t rsa -b 4096 -C "Emailgithub":para generar llaves.
+si bien se puede guardar otra carpeta, la verdad es que se recomienda en defecto.
+
+pedirá contraseña adicional de proteccion.
+
+............Verificar servidor SSH esté corriendo............
+eval $(ssh-agent -s): evaluando. arrojará un Agent pid 18094.
+indica todo ok
+---------------Configurar llaves SSH en GITHUB------------------
+Cada persona, cada equipo, cada sistema. deberá tener una llave única conectada con tu repositorio.
+
 ................Iniciando proyecto git......................
 git init: permite iniciar un proyecto git, creará el repositorio.
 git add documentotextoplano.txt: agregar el archivo a la base de datos.
@@ -49,6 +72,7 @@ git rm --force: Elimina los archivos de Git y del disco duro. Git siempre guarda
 
 git show: mostrará todos los cambios que se hayan hecho. cuando y quien los hizo. (tener en cuenta que esto sólo se mostrará si se tiene el estado stagged -git commit)
 para salir de git show, presionar tecla q.
+
 git log archivo.txt: para visualizar la historia completa de un archivo.
 git diff : permitirá visualizar los cambios.
 
@@ -56,7 +80,13 @@ git diff archireciente archivoiniial: compara los cambios entre dif versiones.
 
 git log --stat: ver cambios que se hicieron. a forma resumen.
 
+git log --all:
+
+git log --all --graph: nos mostrará de forma gráfica la fusión.
+
 git log --graph nos mostrará de forma gráfica la fusión.
+
+git log --all --graph --decorate --oneline: mostrará la gráfica de forma más resumida.
 
 ----------------Git reset-Ir a versiones anteriores-------------
 existen dos versiones para git reset, hard y soft
@@ -113,24 +143,12 @@ Podría generar error, pues el origin master podría ser distinto a lo que se ti
 git pull origin master --allow-unrelated-histories : fusionar las ramas remotos con local. luego permitirá hacer el merge con la rama master.
 
 
------------------------Sobre Llaves-------------------
-Existen dos llaves o códigos cifrados que se generan al mismo tiempo.
+---------------------Crear tags de versiones-------------------
+para conocer las versiones se utiliza: 
+git log --all --graph --decorate --oneline
 
-llave pública: que podrá ser compartida con el mundo, cifrará todos los mensajes que se envién. aún donde se intercepte el mensaje, tardarian años en decifrar. Para eso se necesita entonces.
-
-llave privada: quien servirá para decifrar la llave pública y finalmente el mensaje.
-Lo que me hace pensar que quizas esto funcione como una llave de dos partes.
-
----------------Configurar llaves SSH en Local-------------------
-Se recomienda ir a la home, puede ser $HOME y ejecutar el comando git config -l para visualizar la configuracion. en caso de requerir cambio de email. deberá seguir el siguiente comando.  git config --global user.email "correoquesequiera". Puede verificar nuevamente con git config -l.
-
-ssh-keygen -t rsa -b 4096 -C "Emailgithub":para generar llaves.
-si bien se puede guardar otra carpeta, la verdad es que se recomienda en defecto.
-
-pedirá contraseña adicional de proteccion.
-
-............Verificar servidor SSH esté corriendo............
-eval $(ssh-agent -s): evaluando. arrojará un Agent pid 18094.
-indica todo ok
----------------Configurar llaves SSH en GITHUB------------------
-Cada persona, cada equipo, cada sistema. deberá tener una llave única conectada con tu repositorio.
+que puede ser resumido en un alias. 
+git tag -a v0.1 -m "Primera version" bc3444e : para agregar tags.
+git tag: ver todos los tags
+git show-ref --tags: permite conocer los tags relacionados a las diferentes versiones.
+git push origin --tags: Para enviar tags. 
