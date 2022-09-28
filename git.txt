@@ -1,0 +1,103 @@
+Git es un sistema de control de versiones distribuido.
+
+Antes de instalar Git, se recomienda actualizar paquetes de linux, para eso se utiliza.
+sudo apt-get update: como admin temporalmente, se actualizará.
+sudo apt-get install git : instalará git.
+................Configuración git......................
+git config: muestra toda la configuracion.
+git config --list: configuracion por defecto de mi git.
+git config --list --show-origin: visualizar donde están las configuraciones guardadas.
+git config --global: cambiar la configuracion global.
+git config --global user.name "newname": cambiar la configuracion del usuario de git.
+git config --global user.email "nuevo correo" : cambia configuracion de correo git.
+git remote set-url origin new.git.url/here
+
+................Iniciando proyecto git......................
+git init: permite iniciar un proyecto git, creará el repositorio.
+git add documentotextoplano.txt: agregar el archivo a la base de datos.
+.......Esto provoca pasar el archivo a un estado STAGED..........
+git add .: agrega todos los archivos que hayan cambiado, en el directorio actual a la base de datos.
+
+git rm nombredelarchivo.txt: removerá un archivo específico de los cambios.
+
+
+
+.......Git commit..........
+el comando git commit cada vez que se ejecuta, crea una version del archivo.
+git commit: sirve para enviar los cambios al repositorio.
+git commit -m "comentario de lo que estas cambiando en el archivo": es la mejor practica, pues la idea es identificar los cambios en el tiempo y realizar posibles correcciones futuras.
+
+Alternativa
+Se puede utilizar
+git commit -am "comentario": para agregar los archivos a los que se les hicieron cambios, sin embargo sólo funciona con los archivos que les habia dado add previamente.
+
+-----------------git checkout--------------------------------`
+git checkout: sirve para seleccionar o cambiar a versiones.
+git checkout rama: cambiamos la rama de edicion, ejemplo. de head, pasar a cabecera y seguir editando esa parte.
+git checkout master: devolver a la version del master.
+-----------------------------------------------------------
+git push: enviar las modificasiones que hiciste a un servidor remoto.
+git pull: traer la informacion de un servidor remoto.
+
+......visualizar estado del archivo e interacciones...........
+git status: ver el estado de la base de datos, si se hicieron cambios y no se ha guardad
+o ahí saldrá.
+
+git rm --cached nombrearchivo.txt: excluirá el archivo del comando add y forzara stado nuevo.
+
+git rm --force: Elimina los archivos de Git y del disco duro. Git siempre guarda todo, por lo que podemos acceder al registro de la existencia de los archivos, de modo que podremos recuperarlos si es necesario (pero debemos usar comandos más avanzados).
+
+git show: mostrará todos los cambios que se hayan hecho. cuando y quien los hizo. (tener en cuenta que esto sólo se mostrará si se tiene el estado stagged -git commit)
+para salir de git show, presionar tecla q.
+git log archivo.txt: para visualizar la historia completa de un archivo.
+git diff : permitirá visualizar los cambios.
+
+git diff archireciente archivoiniial: compara los cambios entre dif versiones.
+
+git log --stat: ver cambios que se hicieron. a forma resumen.
+
+git log --graph nos mostrará de forma gráfica la fusión.
+
+----------------Git reset-Ir a versiones anteriores-------------
+existen dos versiones para git reset, hard y soft
+git reset numeroocodigoversion --hard: suele ser la forma más peligrosa pero el que más se utiliza.
+git reset numeroocodigoversion --soft: aplica los cambios pero la versión que tengamos en staggin seguirá en staggint.
+
+git reset HEAD numeroocodigoversion para sacar los archivo del area de staging.
+------------------------git Clone url----------------------
+git clone url proyecto.url traer los datos de un servidor remoto.
+
+Con el link de la url remota trae los archivos a dos carpetas, y crea la base de datos historicos en el repositorio local.
+
+¿Cómo funciona?
+Se trabaja normal, donde el directorio de trabajo y preparacion o stagin, siquen estando en el repositorio local con git add y git commit. y si se quiere enviar a remoto, se utiliza git push.
+
+-----------------------git fetch--------------------
+trae la nueva información que alguien haya estado trabajando desde el servidor remoto al local. Pero no lo copia en mis archivos, para que me copie en mis archivos. tengo que fusionar, la ultima version de repositorio local con mi version actual.
+
+-----------------------git merch--------------------
+antes de hacer un merge, lo ideal es ir al master,
+git checkout master:
+Para saber dónde estoy, se puede usar git status.
+
+git merge nombrerama: traerá la información de otras ramas al master.
+
+git merge es un commit, por lo que necesitará comentarios.
+
+si no conoce nombre de las ramas disponibles puede: 
+git branch: mostrará todas las ramas, el asterisco mostrará dónde me ubico.
+
+-----------------------git remote-------------------
+git remote: permite ver el remote
+git remote -v: verbal.
+git remote add origin https://github.com/fabiot2/malinktree
+git: agregar un origen remoto de nuestro repositorio 
+git remote remove origin: remover un origen de nuestro repositorio.
+git remote rename: cambiar el nombre del origen de nuestro repositorio.
+
+
+
+
+
+-----------------------git pull-------------------
+envía
