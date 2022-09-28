@@ -111,3 +111,26 @@ git pull origin master: trae la información del remoto a local.
 Podría generar error, pues el origin master podría ser distinto a lo que se tiene en local. para forzar.
 
 git pull origin master --allow-unrelated-histories : fusionar las ramas remotos con local. luego permitirá hacer el merge con la rama master.
+
+
+-----------------------Sobre Llaves-------------------
+Existen dos llaves o códigos cifrados que se generan al mismo tiempo.
+
+llave pública: que podrá ser compartida con el mundo, cifrará todos los mensajes que se envién. aún donde se intercepte el mensaje, tardarian años en decifrar. Para eso se necesita entonces.
+
+llave privada: quien servirá para decifrar la llave pública y finalmente el mensaje.
+Lo que me hace pensar que quizas esto funcione como una llave de dos partes.
+
+---------------Configurar llaves SSH en Local-------------------
+Se recomienda ir a la home, puede ser $HOME y ejecutar el comando git config -l para visualizar la configuracion. en caso de requerir cambio de email. deberá seguir el siguiente comando.  git config --global user.email "correoquesequiera". Puede verificar nuevamente con git config -l.
+
+ssh-keygen -t rsa -b 4096 -C "Emailgithub":para generar llaves.
+si bien se puede guardar otra carpeta, la verdad es que se recomienda en defecto.
+
+pedirá contraseña adicional de proteccion.
+
+............Verificar servidor SSH esté corriendo............
+eval $(ssh-agent -s): evaluando. arrojará un Agent pid 18094.
+indica todo ok
+---------------Configurar llaves SSH en GITHUB------------------
+Cada persona, cada equipo, cada sistema. deberá tener una llave única conectada con tu repositorio.
