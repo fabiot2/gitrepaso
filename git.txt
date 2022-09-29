@@ -157,6 +157,12 @@ git push origin :refs/tags/nombretag: sintax interna que borra el tag de nuestro
 -------------------Manejo de ramas en GitHub-------------------
 git show-branch: nos muestra las ramas existentes y su historial.
 git show-branch --all: info completa
+
+git branch nombre: servirá para crear las ramas, importante o recomendable crearlas desde el master o archivo más actualizado.
 ------------------Instalar gitk-------------------
 apt install gitk: instalar gitk
 gitk:  apt install gitk
+---------------Clonar repositorio git/descargar---------------
+git clone https://github.com/fabiot2/gitrepaso.git : para clonar, no pide usuario y contraseña si es público.
+
+ls -la : verificar.
