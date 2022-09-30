@@ -179,4 +179,9 @@ El git pull tambien puede ejecutarse.
 ----------Como se protege git---------------
 Travis ci, jenkins. Permite hacer deploys gits.
 
-git ignore: ignorar archivos.
+git ignore para ignorar archivos. 
+
+Se va a la carpeta raíz del repositorio en local, se crea un archivo de texto plano o por medio de touch. llamado .gitignore, se abre el archivo y se pone *.extension para ignorar todos los archivos con esas extensiones.  ejemplos: *.jpg
+*.Identifier.
+
+El .gitignore deberá ser agregado al commit por medio de git add .gitignore , tambíen deberá entonces hacerse un nuevo commit con los comentarios correspondientes. git commit -am "comentario".
