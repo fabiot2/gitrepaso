@@ -166,3 +166,7 @@ gitk:  apt install gitk
 git clone https://github.com/fabiot2/gitrepaso.git : para clonar, no pide usuario y contraseña si es público.
 
 ls -la : verificar.
+-----------------Notas-------------------
+Como mejores practicas, los archivos binarios no se deberian agregar a los repositorios, si no aparte. 
+-----------------Pull request-------------------
+pull request: estado intermedio entre el stagin y producción. Lo que permitirá es que otros miembros del equipo puedan ver cambios que uno hizo. Si les gusta, se aprobaran y se aprueban en stage. Una vez aprobado todo, se hace un pull request. 
