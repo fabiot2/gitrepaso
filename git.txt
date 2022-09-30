@@ -169,4 +169,14 @@ ls -la : verificar.
 -----------------Notas-------------------
 Como mejores practicas, los archivos binarios no se deberian agregar a los repositorios, si no aparte. 
 -----------------Pull request-------------------
-pull request: estado intermedio entre el stagin y producción. Lo que permitirá es que otros miembros del equipo puedan ver cambios que uno hizo. Si les gusta, se aprobaran y se aprueban en stage. Una vez aprobado todo, se hace un pull request. 
+pull request: estado intermedio entre el stagin y producción. Lo que permitirá es que otros miembros del equipo puedan ver cambios que uno hizo. Si les gusta, se aprobaran y se aprueban en stage. Una vez aprobado todo, se hace un pull request. `
+-----------------Fork------------------
+Consiste en hacer una copia actual del proyecto y clonarlo, sólo con proyectos públicos. Caracteristica propia de GITHUB.
+
+git clone https://github.com/fabiot2/instagram-logo.git : descargará el proyecto en local. La idea es estar en la carpeta donde se desea descargue el proyecto. 
+
+El git pull tambien puede ejecutarse.
+----------Como se protege git---------------
+Travis ci, jenkins. Permite hacer deploys gits.
+
+git ignore: ignorar archivos.
