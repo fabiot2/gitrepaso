@@ -61,17 +61,13 @@
     display: inline;
 }
 
+#container__post figure img {
+    max-width: 500px;
+}
+
 #container__post p {
     font-size: 20px;
     margin-top: 100px;
-}
-
-<<<<<<< HEAD
-=======
-#cabecera {
-    text-align: right;
-    padding: 20px 20px 0 0;
-    color: pink;
 }
 
 
@@ -88,4 +84,3 @@
     font-size: 20px;
     color: white;
 }
->>>>>>> footer
