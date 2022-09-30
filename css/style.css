@@ -45,11 +45,11 @@
 }
 
 #container__post {
-    margin: 0 auto;
+    margin: 40px auto 0 auto;
     text-align: center;
     padding: 20px;
     min-width: 400px;
-    max-width: 600px;
+    max-width: 1000px;
     font-family: 'Courier New', Courier, monospace;
 }
 
