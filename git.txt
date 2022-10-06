@@ -154,7 +154,7 @@ git show-ref --tags: permite conocer los tags relacionados a las diferentes vers
 git push origin --tags: Para enviar tags. 
 git tag -d nombretag: para eliminar tag. No se borra de github pro que es la forma como se taggea, categoriza, organizas cambios.
 git push origin :refs/tags/nombretag: sintax interna que borra el tag de nuestro origen remoto *github*
--------------------Manejo de ramas en GitHub-------------------
+-----------Manejo de ramas en GitHub--------------
 git show-branch: nos muestra las ramas existentes y su historial.
 git show-branch --all: info completa
 
