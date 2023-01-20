@@ -171,3 +171,15 @@ git clone https://github.com/fabiot2/gitrepaso.git : para clonar, no pide usuari
 ls -la : verificar.
 
 El .gitignore deberá ser agregado al commit por medio de git add .gitignore , tambíen deberá entonces hacerse un nuevo commit con los comentarios correspondientes. git commit -am "comentario".
+
+
+$ git pull origin master
+Enter passphrase for key ‘.ssh/id_rsa’:
+
+A la clave ssh se me ocurrio ponerle una clave y me la pide cada vez que quiero traer algo de Github, busque un poco y no he sido el unico jaja, asi que aprendi algo mas…
+
+$ssh-keygen -p
+confirmar
+clave vieja
+clave nueva(ninguna obviamente)
+confirmar
