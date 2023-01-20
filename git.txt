@@ -31,9 +31,7 @@ pedirá contraseña adicional de proteccion.
 
 ............Verificar servidor SSH esté corriendo............
 eval $(ssh-agent -s): evaluando. arrojará un Agent pid 18094.
-indica todo ok
-sera?
-
+indica todo ok, todo ok
 ---------------Agregar la llave privada a Git (Nos pide el password que le dimos con espacios).------------------
 ssh-add ~/.ssh/id_rsa 
 ---------------Configurar llaves SSH en GITHUB------------------
