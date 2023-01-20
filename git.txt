@@ -172,6 +172,7 @@ ls -la : verificar.
 
 El .gitignore deberá ser agregado al commit por medio de git add .gitignore , tambíen deberá entonces hacerse un nuevo commit con los comentarios correspondientes. git commit -am "comentario".
 
+---------------Cómo quitar Clave SSH para ahorrar tiempo.---------------
 
 $ git pull origin master
 Enter passphrase for key ‘.ssh/id_rsa’:
@@ -182,4 +183,6 @@ $ssh-keygen -p
 confirmar
 clave vieja
 clave nueva(ninguna obviamente)
-confirmar
+confirmar.
+Parece que si funciono. 
+---------------------------------------------------------------------------
